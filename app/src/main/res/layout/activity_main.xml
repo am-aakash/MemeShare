@@ -4,6 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/black"
+    android:backgroundTint="@color/black"
     tools:context=".MainActivity">
 
     <ImageView
@@ -32,25 +34,31 @@
         android:id="@+id/shareButton"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:padding="22dp"
+        android:background="@color/white"
+        android:onClick="shareMeme"
+        android:padding="18dp"
         android:text="@string/share"
+        app:icon="?attr/actionModeShareDrawable"
+        app:iconPadding="0dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/guideline2"
         app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        android:onClick="shareMeme"/>
+        app:layout_constraintStart_toStartOf="parent" />
 
     <Button
         android:id="@+id/nextButton"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:padding="22dp"
+        android:background="@color/teal_200"
+        android:onClick="nextMeme"
+        android:padding="14dp"
         android:text="@string/next"
+        app:icon="@android:drawable/ic_media_next"
+        app:iconPadding="0dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintStart_toStartOf="@+id/guideline2"
-        android:onClick="nextMeme"/>
+        app:layout_constraintStart_toStartOf="@+id/guideline2" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline2"
