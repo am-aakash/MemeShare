@@ -24,15 +24,15 @@ class MainActivity : AppCompatActivity() {
         // Instantiate the RequestQueue.
         val queue = Volley.newRequestQueue(this)
         val url = "https://meme-api.herokuapp.com/gimme"
-//        val jsonObjectRequest = JsonObjectRequest(Request.Method.GET, url, null,
-//            Response.Listener{ response ->
-//                var url = response.getString("url")
-//                Glide.with(this).load(url).into(meme)
-//            },
-//            {
-//                Toast.makeText(this,"Something went wrong", Toast.LENGTH_LONG).show()
-//            }
-//        )
+        val jsonObjectRequest = JsonObjectRequest(Request.Method.GET, url, null,
+            Response.Listener{ response ->
+                var url = response.getString("url")
+                Glide.with(this).load(url).into(meme)
+            },
+            {
+                Toast.makeText(this,"Something went wrong", Toast.LENGTH_LONG).show()
+            }
+        )
 
         // Add the request to the RequestQueue.
         queue.add(jsonObjectRequest)
